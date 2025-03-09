@@ -4,8 +4,8 @@ const downloadSection = document.getElementById('downloadSection');
 const downloadBtn = document.getElementById('downloadBtn');
 
 // Doğru giriş bilgilerini belirliyoruz
-const correctEmail = "user@solver.com.tr";
-const correctPassword = "user12345";
+const correctEmail = "sonuc@solver.com.tr";
+const correctPassword = "12345";
 
 // Form gönderildiğinde giriş bilgilerini kontrol et
 loginForm.addEventListener('submit', function(event) {
@@ -25,11 +25,7 @@ loginForm.addEventListener('submit', function(event) {
     }
 });
 
-// İndirme butonuna tıklandığında dosya indir
+// İndirme butonuna tıklandığında klasörü aç
 downloadBtn.addEventListener('click', function() {
-    const downloadLink = document.createElement('a');
-    downloadLink.href = "https://drive.google.com/uc?export=download&id=1tryCe1UCrjmLPK-yhKoT8oSDIa24li5q"; // Google Drive indirme linki
-    downloadLink.target = "_blank"; // Yeni sekmede aç
-    downloadLink.download = "analiz_sonuclari.pdf"; // İndirilen dosya adı
-    downloadLink.click();
+    window.open("https://drive.google.com/drive/folders/1FLZdrt4dHFlCv65K4D17vVQyMvPnsAc3", "_blank");
 });
